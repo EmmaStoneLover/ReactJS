@@ -4,7 +4,7 @@ import BoxRight from './Comps/BoxRight'
 import InputSecond from './Comps/InputSecond'
 import TextAll from './Comps/TextAll'
 
-const URL = 'https://emmastonenodejs.herokuapp.com/'
+const URL = 'https://emmastonenodejs.herokuapp.com'
 
 export default function Second() {
   const [load, setLoad] = useState(null)
