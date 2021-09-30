@@ -17,6 +17,7 @@ export default function InputHome({ textDay, setTextDay }) {
             <Typography
               variant="h5"
               style={{ marginTop: '4px', marginBottom: '4px' }}
+              noWrap
             >
               {textDay ? (
                 textDay
@@ -32,17 +33,12 @@ export default function InputHome({ textDay, setTextDay }) {
             event.preventDefault()
             setChange((prev) => !prev)
           }}
-          // onPointerLeave={() => {
-          //   setChange((prev) => !prev)
-          // }}
         >
           <MyBox>
             <TextField
               value={textDay}
               onChange={(event) => {
-                if (event.target.value.length < 14) {
-                  setTextDay(event.target.value)
-                }
+                setTextDay(event.target.value)
               }}
               fullWidth
               variant="outlined"

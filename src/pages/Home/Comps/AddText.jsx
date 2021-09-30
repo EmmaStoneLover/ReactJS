@@ -12,31 +12,40 @@ export default function AddText() {
 
   return (
     <>
-      <MyBox>
-        <form onSubmit={addTextEvent}>
-          <TextField
-            fullWidth
-            value={text}
-            variant="outlined"
-            label="Вставить текст"
-            onChange={(event) => setText(event.target.value)}
-          />
-        </form>
+      <MyBox p="0" mb={15}>
+        <img src="emma.jpg" alt="" width="100%" style={{ marginBottom: -5 }} />
       </MyBox>
-      <br />
-      <MyBox>
-        {list.map((item) => {
-          return (
-            <Typography
-              key={item.id}
-              variant="h6"
-              style={{ wordBreak: 'break-all' }}
-            >
-              {item.text}
-            </Typography>
-          )
-        })}
-      </MyBox>
+      <Typography>Text text ttt...</Typography>
     </>
   )
+
+  // return (
+  //   <>
+  //     <MyBox>
+  //       <form onSubmit={addTextEvent}>
+  //         <TextField
+  //           fullWidth
+  //           value={text}
+  //           variant="outlined"
+  //           label="Вставить текст"
+  //           onChange={(event) => setText(event.target.value)}
+  //         />
+  //       </form>
+  //     </MyBox>
+  //     <br />
+  //     <MyBox>
+  //       {list.map((item) => {
+  //         return (
+  //           <Typography
+  //             key={item.id}
+  //             variant="h6"
+  //             style={{ wordBreak: 'break-all' }}
+  //           >
+  //             {item.text}
+  //           </Typography>
+  //         )
+  //       })}
+  //     </MyBox>
+  //   </>
+  // )
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Typography, Button, Grid } from '@material-ui/core'
 import MyBox from '../../../components/MyBox'
 
@@ -29,28 +29,6 @@ export default function BoxRight({
     }
   }
 
-  // async function textMoreChange(id) {
-  //   try {
-  //     const res = await (
-  //       await fetch(`${URL}/api/change/${id}`, {
-  //         method: 'POST',
-  //         headers: {
-  //           'Content-Type': 'application/json;charset=utf-8',
-  //         },
-  //       })
-  //     ).json()
-  //     console.log('Change:', res)
-  //     if (res.changed === true) {
-  //       // setLoad((load) => load.filter((i) => i._id !== id))
-  //       // setDeleted(true)
-  //     }
-  //   } catch (err) {
-  //     console.log('Не получилось удалить запись...', err)
-  //   }
-  // }
-
-  // const [text, setText] = useState('text')
-
   return (
     <>
       {textMore !== null ? (
@@ -71,12 +49,6 @@ export default function BoxRight({
                 deleted === null || deleted === false ? 'true' : 'false'
               }
             ></Typography>
-            {/* <TextareaAutosize
-              aria-label="minimum height"
-              minRows={3}
-              placeholder="Вставить текст"
-              value={}
-            /> */}
             <Grid container justifyContent="space-between">
               <Grid item>
                 {deleted === null ? <Button type="submit">Удалить</Button> : ''}
@@ -90,10 +62,6 @@ export default function BoxRight({
               </Grid>
             </Grid>
           </form>
-          {/* {text.map((i) => {
-            console.log('text')
-          })} */}
-          {/* <div dangerouslySetInnerHTML={{ __html: text }}></div> */}
         </MyBox>
       ) : (
         ''
