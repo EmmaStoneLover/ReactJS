@@ -20,13 +20,13 @@ export default function TextAll({ load, setTextMore, setDeleted }) {
                     setDeleted(null)
                   }}
                   style={{
-                    wordBreak: 'break-all',
+                    // wordBreak: 'break-all',
                     padding: 15,
                     paddingLeft: 25,
                     cursor: 'pointer',
                   }}
                 >
-                  <Typography variant="h6">{item.text}</Typography>
+                  <Typography variant="h6" noWrap>{item.text}</Typography>
                 </div>
               </MyBox>
             )
