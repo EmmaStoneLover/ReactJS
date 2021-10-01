@@ -31,10 +31,10 @@ export default function InputSecond({
   return (
     <MyBox>
       <Grid container justifyContent="space-between">
-        <Grid item sx="9">
+        <Grid item xs="9">
           <Typography variant="h3">Second page</Typography>
         </Grid>
-        <Grid item sx="3">
+        <Grid item xs="3">
           {textMore !== null ? (
             <Typography
               onClick={() => setTextMore(null)}
