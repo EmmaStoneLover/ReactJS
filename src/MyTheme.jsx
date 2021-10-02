@@ -16,7 +16,7 @@ import {
 
 export const contrast = 300
 export const firstColor = red[contrast]
-export const firstDarkMode = true
+export const firstDarkMode = false
 
 export const contrastColors = [
   { color: pink[contrast], title: 'pink', checked: true },

@@ -1,5 +1,11 @@
-import React from 'react'
-import { Typography, Button, Grid, Box } from '@material-ui/core'
+import React, { useState, useEffect } from 'react'
+import {
+  Typography,
+  Button,
+  Grid,
+  Box,
+  LinearProgress,
+} from '@material-ui/core'
 import MyBox from '../../../components/MyBox'
 
 export default function BoxRight({
@@ -30,6 +36,11 @@ export default function BoxRight({
     }
   }
 
+  const [spinerDelete, setSpinerDelete] = useState(false)
+  useEffect(() => {
+    if (deleted === true) setSpinerDelete(false)
+  })
+
   return (
     <>
       {textMore !== null ? (
@@ -37,6 +48,7 @@ export default function BoxRight({
           <form
             onSubmit={(event) => {
               event.preventDefault()
+              setSpinerDelete(true)
               textDelete(textMore._id)
             }}
           >
@@ -73,6 +85,11 @@ export default function BoxRight({
                 )}
               </Grid>
             </Grid>
+            {spinerDelete === true ? (
+              <LinearProgress style={{ marginTop: 10 }} />
+            ) : (
+              ''
+            )}
           </form>
         </MyBox>
       ) : (

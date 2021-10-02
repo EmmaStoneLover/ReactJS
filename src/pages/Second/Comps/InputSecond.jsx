@@ -1,13 +1,12 @@
-import React from 'react'
-import { Typography, TextField, Grid, Box } from '@material-ui/core'
+import React, { useState } from 'react'
+import { Typography, TextField, Grid, LinearProgress } from '@material-ui/core'
 import MyBox from '../../../components/MyBox'
 
 export default function InputSecond({
+  load,
   setLoad,
   textInput,
   setTextInput,
-  textMore,
-  setTextMore,
   URL,
 }) {
   async function textFetchApi() {
@@ -26,7 +25,9 @@ export default function InputSecond({
     ).json()
     console.log(res)
     setLoad(res.DB)
+    setSpinerDelete(false)
   }
+  const [spinerDelete, setSpinerDelete] = useState(false)
 
   return (
     <MyBox>
@@ -38,6 +39,7 @@ export default function InputSecond({
         <form
           onSubmit={(event) => {
             event.preventDefault()
+            setSpinerDelete(true)
             textFetchApi()
           }}
         >
@@ -50,6 +52,11 @@ export default function InputSecond({
               setTextInput(event.target.value)
             }}
           />
+          {spinerDelete === true ? (
+            <LinearProgress style={{ marginTop: 10 }} />
+          ) : (
+            ''
+          )}
         </form>
       </MyBox>
     </MyBox>
