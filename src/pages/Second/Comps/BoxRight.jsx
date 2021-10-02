@@ -39,7 +39,9 @@ export default function BoxRight({
               textDelete(textMore._id)
             }}
           >
-            <Typography variant="h4" style={{ wordBreak: 'break-all' }}>
+            <Typography variant="h4" 
+              // style={{ wordBreak: 'break-all' }}
+            >
               {textMore.text ? textMore.text : ''}
             </Typography>
             <Typography
