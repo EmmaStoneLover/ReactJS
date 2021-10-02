@@ -1,10 +1,11 @@
 import React from 'react'
-import { Typography, Button, Grid } from '@material-ui/core'
+import { Typography, Button, Grid, Box } from '@material-ui/core'
 import MyBox from '../../../components/MyBox'
 
 export default function BoxRight({
   setLoad,
   textMore,
+  setTextMore,
   deleted,
   setDeleted,
   URL,
@@ -39,7 +40,16 @@ export default function BoxRight({
               textDelete(textMore._id)
             }}
           >
-            <Typography variant="h4" 
+            <Box sx={{ textAlign: 'right' }}>
+              <Typography
+                onClick={() => setTextMore(null)}
+                style={{ cursor: 'pointer' }}
+              >
+                close
+              </Typography>
+            </Box>
+            <Typography
+              variant="h4"
               // style={{ wordBreak: 'break-all' }}
             >
               {textMore.text ? textMore.text : ''}

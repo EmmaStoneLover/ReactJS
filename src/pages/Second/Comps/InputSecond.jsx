@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography, TextField, Grid } from '@material-ui/core'
+import { Typography, TextField, Grid, Box } from '@material-ui/core'
 import MyBox from '../../../components/MyBox'
 
 export default function InputSecond({
@@ -31,21 +31,7 @@ export default function InputSecond({
   return (
     <MyBox>
       <Grid container justifyContent="space-between">
-        <Grid item xs="10">
-          <Typography variant="h3">Second page</Typography>
-        </Grid>
-        <Grid item xs="2">
-          {textMore !== null ? (
-            <Typography
-              onClick={() => setTextMore(null)}
-              style={{ cursor: 'pointer' }}
-            >
-              close
-            </Typography>
-          ) : (
-            ''
-          )}
-        </Grid>
+        <Typography variant="h3">Second page</Typography>
       </Grid>
       <br />
       <MyBox>

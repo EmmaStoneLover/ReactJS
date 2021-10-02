@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography, Box } from '@material-ui/core'
+import { Typography, Box, LinearProgress } from '@material-ui/core'
 import MyBox from '../../../components/MyBox'
 
 export default function TextAll({ load, setTextMore, setDeleted }) {
@@ -26,15 +26,16 @@ export default function TextAll({ load, setTextMore, setDeleted }) {
                     cursor: 'pointer',
                   }}
                 >
-                  <Typography variant="h6" noWrap>{item.text}</Typography>
+                  <Typography variant="h6" noWrap>
+                    {item.text}
+                  </Typography>
                 </div>
               </MyBox>
             )
           })
       ) : (
         <Box textAlign="center">
-          {/* <Typography>Загрузка...</Typography> */}
-          <img src="./loading.png" alt={'alt-text'} />
+          <LinearProgress />
         </Box>
       )}
     </MyBox>
