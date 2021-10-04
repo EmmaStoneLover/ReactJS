@@ -1,9 +1,10 @@
 import React from 'react'
-import { Container, Typography, Grid } from '@material-ui/core'
+import { Container, Typography, Grid, Button } from '@material-ui/core'
 import InputChange from './Comps/InputHome'
 import MousePointer from './Comps/MousePointer'
 import AddText from './Comps/AddText'
 import MyBox from '../../components/MyBox'
+import { Link } from 'react-router-dom'
 
 export default function Home({ textDay, setTextDay }) {
   return (
@@ -15,6 +16,21 @@ export default function Home({ textDay, setTextDay }) {
               Home page
             </Typography>
             <InputChange textDay={textDay} setTextDay={setTextDay} />
+            <Link to="/login" style={{ textDecoration: 'none' }} exact="true">
+              <br />
+              <Button
+                color="primary"
+                variant="contained"
+                style={{ marginRight: 15 }}
+              >
+                Login
+              </Button>
+              {localStorage.token ? (
+                <Typography variant="p">{localStorage.username}</Typography>
+              ) : (
+                ''
+              )}
+            </Link>
           </MyBox>
         </Grid>
         <Grid item xs={12} md={7}>

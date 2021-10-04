@@ -4,9 +4,7 @@ import BoxRight from './Comps/BoxRight'
 import InputSecond from './Comps/InputSecond'
 import TextAll from './Comps/TextAll'
 
-const URL = 'https://emmastonenodejs.herokuapp.com'
-
-export default function Second() {
+export default function Second({ URL }) {
   const [load, setLoad] = useState(null)
 
   useEffect(() => {

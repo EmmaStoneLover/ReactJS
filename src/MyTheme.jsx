@@ -9,7 +9,6 @@ import {
   indigo,
   cyan,
   lime,
-  yellow,
   pink,
   red,
 } from '@material-ui/core/colors'
@@ -22,7 +21,6 @@ export const contrastColors = [
   { color: pink[contrast], title: 'pink', checked: true },
   { color: green[contrast], title: 'green', checked: false },
   { color: purple[contrast], title: 'purple', checked: false },
-  { color: yellow[contrast], title: 'yellow', checked: false },
   { color: orange[contrast], title: 'orange', checked: false },
   { color: blue[contrast], title: 'blue', checked: false },
   { color: indigo[contrast], title: 'indigo', checked: false },
