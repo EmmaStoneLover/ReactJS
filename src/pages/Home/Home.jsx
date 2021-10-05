@@ -16,7 +16,7 @@ export default function Home({ textDay, setTextDay }) {
              Home page
            </Typography>
            <InputChange textDay={textDay} setTextDay={setTextDay} />
-           <Grid container>
+           <Grid container alignItems="center">
             <Grid item xs="5">
              <Link to="/login" style={{ textDecoration: 'none' }} exact="true">
               <br />
