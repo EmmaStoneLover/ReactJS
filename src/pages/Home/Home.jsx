@@ -12,11 +12,13 @@ export default function Home({ textDay, setTextDay }) {
       <Grid container spacing={2}>
         <Grid item xs={12} md={4}>
           <MyBox>
-            <Typography variant="h3" style={{ marginBottom: 25 }}>
-              Home page
-            </Typography>
-            <InputChange textDay={textDay} setTextDay={setTextDay} />
-            <Link to="/login" style={{ textDecoration: 'none' }} exact="true">
+           <Typography variant="h3" style={{ marginBottom: 25 }}>
+             Home page
+           </Typography>
+           <InputChange textDay={textDay} setTextDay={setTextDay} />
+           <Grid container>
+            <Grid item xs="5">
+             <Link to="/login" style={{ textDecoration: 'none' }} exact="true">
               <br />
               <Button
                 color="primary"
@@ -25,12 +27,16 @@ export default function Home({ textDay, setTextDay }) {
               >
                 Login
               </Button>
+            </Link>
+            </Grid>
+            <Grid item xs="7">
               {localStorage.token ? (
                 <Typography variant="p">{localStorage.username}</Typography>
               ) : (
                 ''
               )}
-            </Link>
+            </Grid>
+           </Grid>
           </MyBox>
         </Grid>
         <Grid item xs={12} md={7}>
