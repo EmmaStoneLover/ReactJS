@@ -65,9 +65,11 @@ export default function Login({ URL }) {
     ).json()
     console.log('Пришло:', res)
     if (res.userError) {
-      return setLabelLogin({ error: true, label: res.userError })
+      setLabelLogin({ error: true, label: res.userError })
+      return setLabelPassword({ error: true, label: "И пароль твой говно!" })
     } else {
       setLabelLogin({ error: false, label: 'Login' })
+      setLabelPassword({ error: false, label: "Password" })
       if (res.passwordError) {
         return setLabelPassword({ error: true, label: res.passwordError })
       } else {
