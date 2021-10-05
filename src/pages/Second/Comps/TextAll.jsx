@@ -14,22 +14,24 @@ export default function TextAll({ load, setTextMore, setDeleted }) {
           .map((item) => {
             return (
               <MyBox key={item._id} p={'0px'} mb={15}>
-                <div
+                <a
                   onClick={() => {
                     setTextMore(item)
                     setDeleted(null)
                   }}
+                  href="#BoxRight"
                   style={{
                     // wordBreak: 'break-all',
                     padding: 15,
                     paddingLeft: 25,
                     cursor: 'pointer',
+                    textDecoration: "none",
                   }}
                 >
                   <Typography variant="h6" noWrap>
                     {item.text}
                   </Typography>
-                </div>
+                </a>
               </MyBox>
             )
           })
