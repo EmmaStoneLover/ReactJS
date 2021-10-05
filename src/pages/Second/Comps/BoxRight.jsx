@@ -46,6 +46,7 @@ export default function BoxRight({
       {textMore !== null ? (
         <MyBox>
           <form
+            id="BoxRight"
             onSubmit={(event) => {
               event.preventDefault()
               setSpinerDelete(true)
