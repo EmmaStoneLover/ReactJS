@@ -13,8 +13,8 @@ export default function App() {
   const [primaryMod, setPrimaryMod] = useState(firstColor)
   const [textDay, setTextDay] = useState('Some text')
 
-  // const URL = 'https://emmastonenodejs.herokuapp.com'
-  const URL = 'http://localhost:8000'
+  const URL = 'https://emmastonenodejs.herokuapp.com'
+  // const URL = 'http://localhost:8000'
 
   return (
     <MyTheme darkMode={darkMode} primaryMod={primaryMod}>
