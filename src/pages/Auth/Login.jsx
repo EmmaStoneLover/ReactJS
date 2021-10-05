@@ -48,9 +48,11 @@ export default function Login({ URL }) {
       password: password,
     }
     if (data.username.length === 0) {
+      setSpiner(false)
       return setLabelLogin({ error: true, label: 'Введи хоть что-то, епта' })
     } else {
       if (data.password.length === 0) {
+        setSpiner(false)
         return setLabelPassword({ error: true, label: 'Пароль забыл' })
       } else setLabelPassword({ error: false, label: 'Password' })
     }
