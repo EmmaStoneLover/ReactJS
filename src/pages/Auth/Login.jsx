@@ -19,6 +19,7 @@ export default function Login({ URL }) {
   const classes = useStyles()
 
   const [isLogged, setIsLogged] = useState(localStorage.token)
+  const [spiner, setSpiner] = useState(false)
 
   const [login, setLogin] = useState('')
   const [password, setPassword] = useState('')
@@ -66,11 +67,13 @@ export default function Login({ URL }) {
     console.log('Пришло:', res)
     if (res.userError) {
       setLabelLogin({ error: true, label: res.userError })
+      setSpiner(false)
       return setLabelPassword({ error: true, label: "И пароль твой говно!" })
     } else {
       setLabelLogin({ error: false, label: 'Login' })
       setLabelPassword({ error: false, label: "Password" })
       if (res.passwordError) {
+        setSpiner(false)
         return setLabelPassword({ error: true, label: res.passwordError })
       } else {
         setLabelPassword({ error: false, label: 'Password' })
@@ -89,6 +92,7 @@ export default function Login({ URL }) {
         setLabelLogin({ error: false, label: 'Login' })
         setLabelPassword({ error: false, label: 'Password' })
         setPassword('')
+        setSpiner(false)
       }
     }
   }
@@ -102,6 +106,7 @@ export default function Login({ URL }) {
               <form
                 onSubmit={(event) => {
                   event.preventDefault()
+                  setSpiner(true)
                   FetchData()
                 }}
               >
@@ -130,6 +135,8 @@ export default function Login({ URL }) {
                     fullWidth
                   />
                   <br /> <br />
+                  {spiner ? <LinearProgress /> : ""}
+                  <br />
                   <Button type="submit" variant="contained" color="primary">
                     Войти
                   </Button>
