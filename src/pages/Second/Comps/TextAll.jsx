@@ -14,7 +14,7 @@ export default function TextAll({ load, setTextMore, setDeleted }) {
           .map((item) => {
             return (
               <MyBox key={item._id} p={'0px'} mb={15}>
-                <a
+                <div
                   onClick={() => {
                     setTextMore(item)
                     setDeleted(null)
@@ -24,14 +24,13 @@ export default function TextAll({ load, setTextMore, setDeleted }) {
                     // wordBreak: 'break-all',
                     padding: 15,
                     paddingLeft: 25,
-                    cursor: 'pointer',
-                    textDecoration: "none",
+                    cursor: 'pointer'
                   }}
                 >
                   <Typography variant="h6" noWrap>
                     {item.text}
                   </Typography>
-                </a>
+                </div>
               </MyBox>
             )
           })
