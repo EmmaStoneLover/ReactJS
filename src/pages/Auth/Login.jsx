@@ -6,7 +6,7 @@ import {
   Typography,
   TextField,
   Button,
-  LinearProgress
+  LinearProgress,
 } from '@material-ui/core'
 import MyBox from '../../components/MyBox'
 import { Link } from 'react-router-dom'
@@ -71,10 +71,10 @@ export default function Login({ URL }) {
     if (res.userError) {
       setLabelLogin({ error: true, label: res.userError })
       setSpiner(false)
-      return setLabelPassword({ error: true, label: "И пароль твой говно!" })
+      return setLabelPassword({ error: true, label: 'И пароль твой говно!' })
     } else {
       setLabelLogin({ error: false, label: 'Login' })
-      setLabelPassword({ error: false, label: "Password" })
+      setLabelPassword({ error: false, label: 'Password' })
       if (res.passwordError) {
         setSpiner(false)
         return setLabelPassword({ error: true, label: res.passwordError })
@@ -138,7 +138,7 @@ export default function Login({ URL }) {
                     fullWidth
                   />
                   <br /> <br />
-                  {spiner ? <LinearProgress /> : ""}
+                  {spiner ? <LinearProgress /> : ''}
                   <br />
                   <Button type="submit" variant="contained" color="primary">
                     Войти
