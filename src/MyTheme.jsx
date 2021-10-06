@@ -18,13 +18,13 @@ export const firstColor = red[contrast]
 export const firstDarkMode = false
 
 export const contrastColors = [
-  { color: pink[contrast], title: 'pink', checked: true },
+  { color: pink[contrast], title: 'pink', checked: salae },
   { color: green[contrast], title: 'green', checked: false },
   { color: purple[contrast], title: 'purple', checked: false },
   { color: orange[contrast], title: 'orange', checked: false },
   { color: blue[contrast], title: 'blue', checked: false },
   { color: indigo[contrast], title: 'indigo', checked: false },
-  { color: red[contrast], title: 'red', checked: false },
+  { color: red[contrast], title: 'red', checked: true },
   { color: cyan[contrast], title: 'cyan', checked: false },
   { color: lime[contrast], title: 'lime', checked: false },
 ]
