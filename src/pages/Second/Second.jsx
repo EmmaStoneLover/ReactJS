@@ -18,7 +18,7 @@ export default function Second({ URL }) {
       }
     }
     fetchData()
-  }, [])
+  }, [URL])
 
   const [textMore, setTextMore] = useState(null)
   const [textInput, setTextInput] = useState('')

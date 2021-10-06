@@ -39,7 +39,7 @@ export default function BoxRight({
   const [spinerDelete, setSpinerDelete] = useState(false)
   useEffect(() => {
     if (deleted === true) setSpinerDelete(false)
-  })
+  }, [deleted])
 
   return (
     <>
