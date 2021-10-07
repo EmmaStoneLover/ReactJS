@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
-import { Typography, TextField } from '@material-ui/core'
+import React from 'react'
+import { Typography } from '@material-ui/core'
 import MyBox from '../../../components/MyBox'
 
 export default function AddText() {
-  const [list, setList] = useState([{ id: 1, text: 'Text example' }])
-  const [text, setText] = useState('')
-  function addTextEvent(event) {
-    event.preventDefault()
-    setList([...list, { id: Date.now(), text: text }])
-  }
+  // const [list, setList] = useState([{ id: 1, text: 'Text example' }])
+  // const [text, setText] = useState('')
+  // function addTextEvent(event) {
+  //   event.preventDefault()
+  //   setList([...list, { id: Date.now(), text: text }])
+  // }
 
   return (
     <>

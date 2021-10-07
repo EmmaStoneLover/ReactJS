@@ -9,7 +9,7 @@ import {
   LinearProgress,
 } from '@material-ui/core'
 import MyBox from '../../components/MyBox'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles((theme) => ({
   primary: { background: theme.palette.primary.main },
@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export default function Login({ URL }) {
-  const classes = useStyles()
+  // const classes = useStyles()
 
   const [isLogged, setIsLogged] = useState(localStorage.token)
   const [spiner, setSpiner] = useState(false)
